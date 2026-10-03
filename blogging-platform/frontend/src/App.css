@@ -182,7 +182,7 @@
     border-right-color: var(--border);
   }
 }
-```css
+
 .clear-filter-button {
   padding: 10px 18px;
   border: 1px solid var(--accent-border);
@@ -211,4 +211,4 @@
   outline: 2px solid var(--accent);
   outline-offset: 2px;
 }
-```
+
