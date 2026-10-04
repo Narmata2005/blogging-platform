@@ -6,7 +6,7 @@ const likeRoutes = require("./routes/likeRoutes");
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
-const dns = require("dns");
+const dns = require("dns");  //DNS resolves domain names to IP addresses. In our project, I used Node's DNS configuration to work around a local DNS resolution issue when connecting to MongoDB Atlas.
 const helmet = require("helmet");
 
 require("dotenv").config();
@@ -120,7 +120,7 @@ app.use((err, req, res, next) => {
 mongoose.connect(
     process.env.MONGO_URI,
     {
-        family: 4
+        family: 4   // Use IPv4 to avoid DNS resolution issues with MongoDB Atlas
     }
 )
     .then(() => {
